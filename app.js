@@ -19,6 +19,10 @@ app.use(
 
 app.use("/api/v1", drenchRouter);
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 const server = app.listen(port, () => {
   console.log("Running on", port);
 });
